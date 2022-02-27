@@ -23,7 +23,7 @@ void writeFields(SystemParam_t *Par, Field_t *Fields){
     }
   }
 
-  snprintf(buffer, sizeof(char)*64, "../bin/config.bin");
+  snprintf(buffer, sizeof(char)*64, "./bin/config.bin");
   fptr = fopen(buffer, "wb");
   if (fptr == NULL) {
     perror("Errore in apertura");
@@ -48,7 +48,7 @@ void readFields(SystemParam_t *Par, Field_t *Fields){
 
   Field_cpy_t Fields_cpy;
 
-  snprintf(buffer, sizeof(char)*64, "../bin/config.bin");
+  snprintf(buffer, sizeof(char)*64, "./bin/config.bin");
   fptr = fopen(buffer, "rb");
   if (fptr == NULL) {
     perror("Errore in apertura");
@@ -84,7 +84,7 @@ void writeEps(SystemParam_t *Par){
 
   eps_cpy_t eps_cpy;
 
-  snprintf(buffer, sizeof(char)*64, "../bin/eps.bin");
+  snprintf(buffer, sizeof(char)*64, "./bin/eps.bin");
   fptr = fopen(buffer, "wb");
   if (fptr == NULL) {
     perror("Errore in apertura");
@@ -110,7 +110,7 @@ void readEps(SystemParam_t *Par){
 
   eps_cpy_t eps_cpy;
 
-  snprintf(buffer, sizeof(char)*64, "../bin/eps.bin");
+  snprintf(buffer, sizeof(char)*64, "./bin/eps.bin");
   fptr = fopen(buffer, "rb");
   if (fptr == NULL) {
     perror("Errore in apertura");

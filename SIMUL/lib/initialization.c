@@ -36,7 +36,7 @@ void read_from_input_Param(SystemParam_t *Par){
   char buffer[64];
   FILE *fInput;
 
-  snprintf(buffer, sizeof(char)*64, "../input/input.txt");
+  snprintf(buffer, sizeof(char)*64, "./input/input.txt");
   fInput = fopen(buffer, "r");
   if (fInput == NULL) {
     perror("Errore in apertura in read_from_input_Param");

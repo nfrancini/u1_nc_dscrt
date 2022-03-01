@@ -92,7 +92,7 @@ double H_g_dens(SystemParam_t *Par, Field_t *Fields){
       }
     }
   }
-  ene = (Par->K/2.0)*(sum/2.0);       // UN FATTORE 1/2 È DOVUTO ALLA NORMALIZZAZIONE DI K MENTRE L'ALTRO ALLA SIMMETRIZZAZIONE DELLA SOMMA
+  ene = (Par->K)*sum/4;       // UN FATTORE 1/2 È DOVUTO ALLA NORMALIZZAZIONE DI K MENTRE L'ALTRO ALLA SIMMETRIZZAZIONE DELLA SOMMA
   return ene/(Par->V);              // RESTITUISCO LA DENSITÀ DI ENERGIA DEL CAMPO DI GAUGE
 }
 

@@ -129,7 +129,7 @@ void initializeFields(SystemParam_t *Par, Field_t *Fields){
     }
     for(mu=0;mu<D;mu++){
       // Fields->gauge[i][mu] = floor(i*rndm()) + floor(mu*rndm());
-      Fields->gauge[i][mu] = 1;
+      Fields->gauge[i][mu] = floor((Par->V)*D*rndm());
     }
   }
 }

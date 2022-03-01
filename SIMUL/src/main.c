@@ -38,15 +38,15 @@ int main(int argc, char const *argv[]){
   writeFields(&Param, &Config);
 
   // ESEGUO DELLE MISURAZIONI DI ENERGIA OGNI CHIAMATA DI UP_CONF CHE RIPETE IDEC VOLTE L'UPDATE
-  snprintf(buffer, sizeof(char)*64, "../data");
+  snprintf(buffer, sizeof(char)*64, "../DATA");
   if(stat(buffer, &st) == -1){                                // SE NON ESISTE LA CARTELLA LA CREA
     mkdir(buffer, 0700);
   }
-  snprintf(buffer, sizeof(char)*64, "../data/L_%d", Param.L);
+  snprintf(buffer, sizeof(char)*64, "../DATA/L_%d", Param.L);
   if(stat(buffer, &st) == -1){                                // SE NON ESISTE LA CARTELLA LA CREA
     mkdir(buffer, 0700);
   }
-  snprintf(buffer, sizeof(char)*64, "../data/L_%d/J_%.5lf_k_%.5lf.dat", Param.L, Param.J, Param.K);
+  snprintf(buffer, sizeof(char)*64, "../DATA/L_%d/J_%.5lf_k_%.5lf.dat", Param.L, Param.J, Param.K);
   fptr = fopen(buffer, "w");
   if (fptr == NULL) {
     perror("Errore in apertura per la scrittura dati");
@@ -67,8 +67,8 @@ int main(int argc, char const *argv[]){
 
   // ALCUNI MESSAGGI DI USCITA TRA CUI ACCETTANZE E MESSAGGIO DI FINE PROGRAMMA
   #ifdef DEBUG
-  printf("1.0e-12<ERRORE<1.0E-11 = %lf\n", err1/(Param.iOverr*D*(Param.V)*((Param.iDec))*(Param.iMis)));
-  printf("ERRORE>1.0E-11 = %lf\n", err2/(Param.iOverr*D*(Param.V)*((Param.iDec)*(Param.iMis))));
+  printf("1.0e-12<ERRORE<1.0E-11 = %lf\n", err1/((1 + Param.iOverr + D)*(Param.V)*((Param.iDec))*(Param.iMis)));
+  printf("ERRORE>1.0E-11 = %lf\n", err2/((Param.iOverr+D+1)*(Param.V)*((Param.iDec)*(Param.iMis))));
   #endif
   printf("FINE PROGRAMMA \n");
 

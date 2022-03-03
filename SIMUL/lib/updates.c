@@ -346,14 +346,14 @@ void modify_eps(SystemParam_t *Par, Field_t *Fields, bool_t ctrl_3, bool_t ctrl_
     return;
   }
   else if((ctrl_3==FALSE)&&(ctrl_4==FALSE)){   // acc2 TROPPO PICCOLA
-    Par->eps2 = Par->eps2 - 1/(50*Par->J);
+    Par->eps2 = Par->eps2 - 0.05;
     acc1 = 0;
     acc2 = 0;
     printf("eps2 %lf\n", Par->eps2);
     thermalization(Par, Fields, count+1);
   }
   else if((ctrl_3==FALSE)&&(ctrl_4==TRUE)){    // acc2 TROPPO GRANDE
-    Par->eps2 = Par->eps2 + 1/(50*Par->J);
+    Par->eps2 = Par->eps2 + 0.05;
     acc1 = 0;
     acc2 = 0;
     printf("eps2 %lf\n", Par->eps2);

@@ -69,12 +69,12 @@ int main(int argc, char const *argv[]){
   #ifdef DEBUG
   printf("1.0e-12<ERRORE<1.0E-11 = %lf\n", err1/((1 + Param.iOverr + D)*(Param.V)*((Param.iDec))*(Param.iMis)));
   printf("ERRORE>1.0E-11 = %lf\n", err2/((Param.iOverr+D+1)*(Param.V)*((Param.iDec)*(Param.iMis))));
-  #endif
-  printf("ACCETTANZA DELL'UPDATE DI GAUGE %.13lf\n", acc1/((Param.V)*(D)*(Param.iDec)*(Param.iMis)));
-  printf("ACCETTANZA DELL'UPDATE SCALARE %.13lf\n", acc2/((Param.V)*(Param.iDec)*(Param.iMis)));
   printf("eps2 = %lf\n", Param.eps2);
   printf("STEP = %lf\n", STEP);
   printf("D=%d\tN=%d\n", D,N);
+  #endif
+  printf("ACCETTANZA DELL'UPDATE DI GAUGE %.13lf\n", acc1/((Param.V)*(D)*(Param.iDec)*(Param.iMis)));
+  printf("ACCETTANZA DELL'UPDATE SCALARE %.13lf\n", acc2/((Param.V)*(Param.iDec)*(Param.iMis)));
   printf("FINE PROGRAMMA \n");
 
   // CONVIENE ANCHE INSERIRE IL NOME DEL FILE DI SALVATAGGIO DA INPUT

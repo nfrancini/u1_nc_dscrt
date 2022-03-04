@@ -58,7 +58,7 @@ double H_g_dens(SystemParam_t *Par, Field_t *Fields){
 
   sum=0;
   for(iSite=0;iSite<(Par->V);iSite++){    // CALCOLO LA SOMMA PER IL CONTRIBUTO DI GAUGE
-    for(mu=0;mu<(D);mu++){           // NOTO CHE SUM_(MU<NU) = 1/2 SUM(MU != NU) SE IL TENSORE SOMMATO È SIMMETRICO
+    for(mu=0;mu<(D);mu++){                // NOTO CHE SUM_(MU<NU) = 1/2 SUM(MU != NU) SE IL TENSORE SOMMATO È SIMMETRICO
       for(nu=0;nu<(D);nu++){
         if(nu != mu){
           sum = sum + pow(STEP*(nearest_gauge(Fields, iSite, mu, nu, TRUE) -Fields->gauge[iSite][nu] - nearest_gauge(Fields, iSite, nu, mu, TRUE) + Fields->gauge[iSite][mu]), 2);
@@ -169,9 +169,6 @@ void measure(SystemParam_t *Par, Field_t *Fields, Obs_t *Obs){
   Obs->spin_ene_density = H_z_dens(Par, Fields);
   Obs->gauge_ene_density = H_g_dens(Par, Fields);
   Obs->ene_density = Obs->spin_ene_density + Obs->gauge_ene_density;
-  // susc(Par, Fields, &(Obs->susc));
-  // G_pm(Par, Fields, &(Obs->G_pm));
-  // mu2(Par, Fields, &(Obs->mu2));
   susc_mu2(Par, Fields, &(Obs->susc), &(Obs->mu2));
   G_pm_matrix(Par, Fields, &(Obs->G_pm));
 }

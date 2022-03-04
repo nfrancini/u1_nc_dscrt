@@ -125,12 +125,10 @@ void initializeFields(SystemParam_t *Par, Field_t *Fields){
 
   for(i=0;i<(Par->V);i++){
     for(j=0;j<N;j++){
-      // Fields->scalar[i][j] = cexp(I*rndm()*PI)/sqrt(N);
       Fields->scalar[i][j] = 1.0/sqrt(N) + 0.0*I;
     }
     for(mu=0;mu<D;mu++){
       Fields->gauge[i][mu] = 0;
-      // Fields->gauge[i][mu] = floor(2*(rndm() - 1)*10);
     }
   }
 }

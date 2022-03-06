@@ -358,7 +358,7 @@ void modify_eps(SystemParam_t *Par, Field_t *Fields, bool_t ctrl_3, bool_t ctrl_
 // PROCEDURA DI UPDATE DELLE CONFIGURAZIONI, PER IDEC VOLTE
 void update_configurations(SystemParam_t *Par, Field_t *Fields){
   int i, j;
-  int cycle=10;
+  int cycle = 10;
 
   for(i=0;i<(Par->iDec); i++){            // RIPETO PER IDEC VOLTE GLI UPDATE 1 SCALARE, 1 GAUGE, iOverr MICRO
     update_metro_scalar(Par, Fields);

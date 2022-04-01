@@ -128,7 +128,7 @@ void writeObs(FILE *fptr, Obs_t *Obs){
 // PROCEDURA CHE SCRIVE IL FILE DI LOGS
 void writeLogs(SystemParam_t *Par){
   FILE *fptr;
-  fptr = fopen(Par->log_file, "w");
+  fptr = fopen(Par->log_file, "a");
   if(fptr == NULL){
     perror("Errore in apertura");
     exit(EXIT_FAILURE);
@@ -168,7 +168,7 @@ void writeLogs(SystemParam_t *Par){
   fprintf(fptr, "ACCETTANZA UPDATE DI GAUGE %lf\n", acc1/((Par->iMis)*(Par->iDec)*(D)*(Par->V)));
   fprintf(fptr, "ACCETTANZA UPDATE SCALARE %lf\n\n", acc2/((Par->iMis)*(Par->iDec)*(Par->V)));
 
-  fprintf(fptr, "PROGRAMMA ESEGUITO CORRETTAMENTE\n");
+  fprintf(fptr, "PROGRAMMA ESEGUITO CORRETTAMENTE\n\n");
 
   fclose(fptr);
 }

@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL'
+ac_pwd='/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -653,12 +653,12 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
-S["install_sh"]="${SHELL} '/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/install-sh'"
-S["MAKEINFO"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing\" makeinfo"
-S["AUTOHEADER"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing\" autoheader"
-S["AUTOMAKE"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing\" automake-1.16"
-S["AUTOCONF"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing\" autoconf"
-S["ACLOCAL"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing\" aclocal-1.16"
+S["install_sh"]="${SHELL} '/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/install-sh'"
+S["MAKEINFO"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing\" makeinfo"
+S["AUTOHEADER"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing\" autoheader"
+S["AUTOMAKE"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing\" automake-1.16"
+S["AUTOCONF"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing\" autoconf"
+S["ACLOCAL"]="${SHELL} \"/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing\" aclocal-1.16"
 S["VERSION"]="0.1"
 S["PACKAGE"]="u1_nc_dscrt"
 S["CYGPATH_W"]="echo"

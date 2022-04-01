@@ -193,14 +193,14 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing" aclocal-1.16
+ACLOCAL = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing" aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing" autoconf
-AUTOHEADER = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing" autoheader
-AUTOMAKE = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing" automake-1.16
+AUTOCONF = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing" autoconf
+AUTOHEADER = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing" autoheader
+AUTOMAKE = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing" automake-1.16
 AWK = mawk
-CC = gcc
+CC = icc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
@@ -224,7 +224,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lm 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/missing" makeinfo
+MAKEINFO = ${SHELL} "/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/missing" makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 N = 2
 OBJEXT = o
@@ -240,10 +240,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.1
-abs_builddir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL
-abs_srcdir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL
-abs_top_builddir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL
-abs_top_srcdir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL
+abs_builddir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt
+abs_srcdir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt
+abs_top_builddir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt
+abs_top_srcdir = /home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -262,7 +262,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} '/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/SIMUL/install-sh'
+install_sh = ${SHELL} '/home/n-francini/Scrivania/TESI/SIMULAZIONI NUMERICHE/u1_nc_dscrt/u1_nc_dscrt/install-sh'
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -310,7 +310,7 @@ u1_nc_dscrt_SOURCES = ./src/main.c \
 								$(dSFMT) \
 								$(libs)
 
-AM_CFLAGS = -O3 -msse2 -DDSFMT_MEXP=19937 -DHAVE_SSE2 -lm
+AM_CFLAGS = -O3 -msse2 -DDSFMT_MEXP=19937 -DHAVE_SSE2
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
